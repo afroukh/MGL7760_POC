@@ -1,4 +1,7 @@
+using MGL7760POC.Abstraction.Repositories;
+using MGL7760POC.Abstraction.Services;
 using MGL7760POC.Implementation.Repositories;
+using MGL7760POC.Implementation.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,6 +31,10 @@ namespace MGL7760POC.Web
             services.AddDbContext<ImpotsContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddControllersWithViews();
+
+            services.AddScoped<IImpotUnitOfWork, ImpotUnitOfWork>();
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            services.AddScoped<IDeclarationService, DeclarationService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Abstraction\Services\MGL7760POC.Abstraction.Services\MGL7760POC.Abstraction.Services.csproj" />
+    <ProjectReference Include="..\..\Repositories\MGL7760POC.Implementation.Repositories\MGL7760POC.Implementation.Repositories.csproj" />
+  </ItemGroup>
+
 </Project>

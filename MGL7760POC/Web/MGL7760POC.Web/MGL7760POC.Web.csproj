@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Implementation\Repositories\MGL7760POC.Implementation.Repositories\MGL7760POC.Implementation.Repositories.csproj" />
+    <ProjectReference Include="..\..\Implementation\Services\MGL7760POC.Implementation.Services\MGL7760POC.Implementation.Services.csproj" />
   </ItemGroup>
 
 </Project>
