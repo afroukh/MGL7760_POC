@@ -1,4 +1,5 @@
 ﻿using MGL7760POC.Abstraction.Services;
+using MGL7760POC.Abstraction.Services.Models;
 using MGL7760POC.Implementation.Repositories;
 using System;
 using System.Collections.Generic;
@@ -9,9 +10,9 @@ namespace MGL7760POC.Implementation.Services
 {
     public class DeclarationService : IDeclarationService
     {
-        private readonly ImpotUnitOfWork _impotUnitOfWork;
+        private readonly IImpotUnitOfWork _impotUnitOfWork;
 
-        public DeclarationService(ImpotUnitOfWork impotUnitOfWork)
+        public DeclarationService(IImpotUnitOfWork impotUnitOfWork)
         {
             _impotUnitOfWork = impotUnitOfWork;
         }

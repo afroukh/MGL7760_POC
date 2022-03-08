@@ -1,4 +1,5 @@
-﻿using MGL7760POC.Web.Models;
+﻿using MGL7760POC.Abstraction.Services;
+using MGL7760POC.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -12,15 +13,17 @@ namespace MGL7760POC.Web.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly IDeclarationService _declarationService;
+        public HomeController(ILogger<HomeController> logger, IDeclarationService declarationService)
         {
             _logger = logger;
+            _declarationService = declarationService;
         }
 
         public IActionResult Index()
         {
-            return View();
+            var declarations = _declarationService.GetDeclarations();
+            return View(declarations);
         }
 
         public IActionResult Privacy()

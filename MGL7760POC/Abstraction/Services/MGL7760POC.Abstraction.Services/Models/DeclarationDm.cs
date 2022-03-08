@@ -1,4 +1,4 @@
-﻿namespace MGL7760POC.Abstraction.Services
+﻿namespace MGL7760POC.Abstraction.Services.Models
 {
     public class DeclarationDm
     {

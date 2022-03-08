@@ -1,8 +1,15 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@using MGL7760POC.Abstraction.Services.Models
+@model IEnumerable<DeclarationDm>
+@{
+    ViewData["Title"] = "Mes Déclarations";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    @{
+        
+        foreach(var declaration in Model)
+        {
+            <p>@declaration.Id  |  @declaration.DateCreation</p>
+        }
+    }
 </div>

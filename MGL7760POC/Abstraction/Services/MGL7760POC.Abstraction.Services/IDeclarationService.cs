@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MGL7760POC.Abstraction.Services.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
