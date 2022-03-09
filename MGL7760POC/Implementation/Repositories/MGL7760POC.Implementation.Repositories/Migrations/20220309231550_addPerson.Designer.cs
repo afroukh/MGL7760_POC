@@ -3,14 +3,16 @@ using MGL7760POC.Implementation.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace MGL7760POC.Implementation.Repositories.Migrations
 {
     [DbContext(typeof(ImpotsContext))]
-    partial class ImpotsContextModelSnapshot : ModelSnapshot
+    [Migration("20220309231550_addPerson")]
+    partial class addPerson
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
